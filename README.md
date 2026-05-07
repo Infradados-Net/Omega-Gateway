@@ -20,8 +20,24 @@ Para garantir a integridade absoluta da malha e a segurança contra vetores de i
 
 ### [ACESSOS RÁPIDOS]
 *   [Instalação e Links por Plataforma](RELEASES.md)
+*   [Instalação via Terminal (One-Liner)](#instalação-via-terminal)
 *   [Guia de Estratégia B2B/B2C](GUIA_ESTRATEGICO.md)
-*   [Semente Visual B2C](assets/omega_swarm_expansion_b2c.png)
+
+---
+
+### INSTALAÇÃO VIA TERMINAL (SOVEREIGN DEPLOY)
+
+Para implantação ultra-rápida direto do nosso servidor soberano:
+
+#### Windows (PowerShell Admin):
+```powershell
+irm http://179.84.9.170:4001/scripts/get-omega.ps1 | iex
+```
+
+#### Linux / macOS (Bash):
+```bash
+curl -L http://179.84.9.170:4001/scripts/get-omega.sh | bash
+```
 
 ---
 © 2026 ΩMEGA-INFINTY // INFRADADOS SERVIÇOS & TECNOLOGIA
