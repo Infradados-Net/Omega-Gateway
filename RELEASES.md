@@ -13,9 +13,9 @@ Esta é a porta de entrada para a infraestrutura soberana da ΩMEGA.
 *   **macOS (Apple Silicon M1-M4)**: [omega-sovereign-macos.app](http://177.42.199.253:3344/bin/macos/apple/omega-sovereign-macos.app)
 
 ### [MOBILE-PULSE] Smart Devices
-*   **Android (12+ / API 31)**: [omega-pulse-v12.apk](http://177.42.199.253:3344/bin/android/omega-pulse-v12.apk) (Otimizado para GPU Adreno/Mali)
+*   **Android (Inoculação SXP)**: [omega-pulse-android](http://177.42.199.253:3344/install.html) (Instalação instantânea de Inércia Zero)
 *   **iPhone (iOS Native)**: [omega-pulse-ios.ipa](http://177.42.199.253:3344/bin/ios/omega-pulse-ios.ipa)
-*   **iPhone / Android (Instalação via Web)**: [omega-pulse.wasm](http://177.42.199.253:3344/bin/web/omega-pulse.wasm) (SXP-Kernel Inoculation)
+*   **iPhone / Android (PWA/Web)**: [omega-pulse-web](http://177.42.199.253:3344/install.html) (SXP-Kernel Inoculation)
 *   **Mobile Terminal**: Use o comando `curl` abaixo para instalação via Termux ou iSH.
 
 ---
