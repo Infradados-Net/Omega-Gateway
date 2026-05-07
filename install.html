@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ΩMEGA | Instalação Universal</title>
+    <style>
+        body {
+            background: #000;
+            color: #0ff;
+            font-family: 'Courier New', Courier, monospace;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+            overflow: hidden;
+        }
+        .nucleo {
+            border: 2px solid #0ff;
+            padding: 40px;
+            box-shadow: 0 0 20px #0ff;
+            text-align: center;
+            background: rgba(0, 255, 255, 0.05);
+        }
+        .status {
+            margin-top: 20px;
+            font-size: 1.2em;
+        }
+        .spinner {
+            width: 40px;
+            height: 40px;
+            border: 4px solid #0ff;
+            border-top: 4px solid transparent;
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+            margin: 20px auto;
+        }
+        @keyframes spin { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }
+    </style>
+</head>
+<body>
+    <div class="nucleo">
+        <h1>ΩMEGA CORE-ENGINE</h1>
+        <p>IDENTIFICANDO ARQUITETURA DE BORDA...</p>
+        <div class="spinner"></div>
+        <div id="os-status" class="status">Sincronizando...</div>
+    </div>
+
+    <script>
+        const statusEl = document.getElementById('os-status');
+        const userAgent = navigator.userAgent || navigator.vendor || window.opera;
+
+        function detectOS() {
+            if (/windows phone/i.test(userAgent)) return "Windows Phone";
+            if (/android/i.test(userAgent)) return "Android";
+            if (/iPad|iPhone|iPod/.test(userAgent) && !window.MSStream) return "iOS";
+            if (/Macintosh|MacIntel|MacPPC|Mac68K/.test(userAgent)) return "macOS";
+            if (/Win32|Win64|Windows|WinCE/.test(userAgent)) return "Windows";
+            if (/Linux/.test(userAgent)) return "Linux";
+            return "Unknown";
+        }
+
+        const os = detectOS();
+        statusEl.innerText = `PLATAFORMA DETECTADA: ${os}`;
+
+        setTimeout(() => {
+            statusEl.innerText = "INICIANDO INOCULAÇÃO DE INÉRCIA ZERO...";
+            
+            let downloadUrl = "";
+            switch(os) {
+                case "Windows":
+                    downloadUrl = "https://omegast.pro/bin/v6.1-gold/windows/omega-sovereign-windows.exe";
+                    break;
+                case "Linux":
+                    downloadUrl = "https://omegast.pro/bin/v6.1-gold/linux/omega-sovereign-linux.bin";
+                    break;
+                case "macOS":
+                    downloadUrl = "https://omegast.pro/bin/v6.1-gold/macos/apple/omega-sovereign-macos.app";
+                    break;
+                case "iOS":
+                case "Android":
+                    // Redirect to SXP-Kernel Instant Load
+                    downloadUrl = "https://b2c.infradados.net/omega-pulse";
+                    break;
+                default:
+                    downloadUrl = "https://omegast.pro/bin/v6.1-gold/universal/manual-install.html";
+            }
+            
+            window.location.href = downloadUrl;
+        }, 2000);
+    </script>
+</body>
+</html>

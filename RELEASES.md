@@ -1,8 +1,13 @@
 # ΩMEGA CORE-ENGINE v6.1-GOLD // PUBLIC RELEASES
 
-Esta é a porta de entrada para a infraestrutura soberana da ΩMEGA. Abaixo, os binários certificados para cada arquitetura de borda, incluindo suporte otimizado para o ecossistema Apple.
+Esta é a porta de entrada para a infraestrutura soberana da ΩMEGA. 
 
-### [NATIVE-METAL] Desktop Interfaces
+### 🚀 [LINK UNIVERSAL: INSTALAÇÃO COM UM CLIQUE](install.html)
+*O ΩMEGA reconhecerá sua arquitetura automaticamente e iniciará a inoculação correta para Windows, Linux, Mac, iPhone ou Android.*
+
+---
+
+### [NATIVE-METAL] Desktop Interfaces (Links Manuais)
 *   **Windows (x64)**: [omega-sovereign-windows.exe](https://omegast.pro/bin/v6.1-gold/windows/omega-sovereign-windows.exe)
 *   **Linux (Kernel 5.15+)**: [omega-sovereign-linux.bin](https://omegast.pro/bin/v6.1-gold/linux/omega-sovereign-linux.bin)
 *   **macOS (Apple Silicon M1-M4)**: [omega-sovereign-macos.app](https://omegast.pro/bin/v6.1-gold/macos/apple/omega-sovereign-macos.app)
