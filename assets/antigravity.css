@@ -1,0 +1,45 @@
+﻿/* antigravity.css – Tema Metal Escovado */
+:root {
+  --metal-primary:   #0f1115;          /* Base escura (Native Dark) */
+  --metal-accent:    #1a1d24;          /* Ligeiro contraste */
+  --metal-gold:      #00ffff;          /* Detalhes metálicos (Plasma Cyan) */
+}
+
+/* Fundo principal da aplicação */
+body, .app-root, .dashboard {
+  background: #0f1115;               /* fallback sólido */
+  background-image:
+    linear-gradient(145deg,
+      var(--metal-primary) 0%,
+      var(--metal-accent) 30%,
+      var(--metal-primary) 60%,
+      var(--metal-accent) 100%);
+  background-size: 400% 400%;
+  animation: metal-flow 12s ease infinite;
+  color: #e0e0e0;                    /* texto claro legível */
+}
+
+/* Efeito de “brushed metal” – textura fina */
+body::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: repeating-linear-gradient(
+    45deg,
+    rgba(255,255,255,0.015) 0,
+    rgba(255,255,255,0.015) 1px,
+    transparent 1px,
+    transparent 2px
+  );
+  pointer-events: none;
+  mix-blend-mode: overlay;
+  z-index: -1;
+}
+
+/* Animação sutil de fluxo */
+@keyframes metal-flow {
+  0%   { background-position: 0% 0%; }
+  50%  { background-position: 100% 100%; }
+  100% { background-position: 0% 0%; }
+}
+
