@@ -9,13 +9,13 @@ Esta é a porta de entrada para a infraestrutura soberana da ΩMEGA.
 
 ### [NATIVE-METAL] Desktop Interfaces (Links Manuais)
 *   **Windows (x64)**: [omega-sovereign-windows.exe](http://177.42.199.253:3344/bin/windows/omega-sovereign-windows.exe)
-*   **Linux (Kernel 5.15+)**: [omega-sovereign-linux.bin](http://177.42.199.253:3344/bin/linux/omega-sovereign-linux.bin)
-*   **macOS (Apple Silicon M1-M4)**: [omega-sovereign-macos.app](http://177.42.199.253:3344/bin/macos/apple/omega-sovereign-macos.app)
+*   **Linux (Kernel 5.15+)**: [omega-pulse-linux](http://177.42.199.253:3344/install.html) (SXP-Inoculation)
+*   **macOS (Apple Silicon)**: [omega-pulse-macos](http://177.42.199.253:3344/install.html) (SXP-Inoculation)
 
 ### [MOBILE-PULSE] Smart Devices
-*   **Android (Inoculação SXP)**: [omega-pulse-android](http://177.42.199.253:3344/install.html) (Instalação instantânea de Inércia Zero)
-*   **iPhone (iOS Native)**: [omega-pulse-ios.ipa](http://177.42.199.253:3344/bin/ios/omega-pulse-ios.ipa)
-*   **iPhone / Android (PWA/Web)**: [omega-pulse-web](http://177.42.199.253:3344/install.html) (SXP-Kernel Inoculation)
+*   **Android (Inoculação SXP)**: [omega-pulse-android](http://177.42.199.253:3344/install.html) (Instalação instantânea)
+*   **iPhone (iOS SXP)**: [omega-pulse-ios](http://177.42.199.253:3344/install.html) (SXP-Inoculation)
+*   **iPhone / Android (Universal)**: [omega-pulse-web](http://177.42.199.253:3344/install.html) (SXP-Kernel)
 *   **Mobile Terminal**: Use o comando `curl` abaixo para instalação via Termux ou iSH.
 
 ---
