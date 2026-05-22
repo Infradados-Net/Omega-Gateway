@@ -1,98 +1,64 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ΩMEGA | Instalação Universal</title>
-    <link rel="manifest" href="manifest.json">
-    <meta name="theme-color" content="#00ffff">
-    <link rel="apple-touch-icon" href="assets/omega_titanium_logo.png">
-    <style>
-        body {
-            background: #000;
-            color: #0ff;
-            font-family: 'Courier New', Courier, monospace;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            height: 100vh;
-            margin: 0;
-            overflow: hidden;
-        }
-        .nucleo {
-            border: 2px solid #0ff;
-            padding: 40px;
-            box-shadow: 0 0 20px #0ff;
-            text-align: center;
-            background: rgba(0, 255, 255, 0.05);
-        }
-        .status {
-            margin-top: 20px;
-            font-size: 1.2em;
-        }
-        .spinner {
-            width: 40px;
-            height: 40px;
-            border: 4px solid #0ff;
-            border-top: 4px solid transparent;
-            border-radius: 50%;
-            animation: spin 1s linear infinite;
-            margin: 20px auto;
-        }
-        @keyframes spin { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ΩMEGA | Instalação</title>
+  <link rel="manifest" href="manifest.json">
+  <meta name="theme-color" content="#0f1113">
+  <style>
+    :root {
+      --bg: #0f1113; --panel: #171a1d; --metal: #aeb6bf;
+      --accent: #8fa3ad; --border: rgba(255,255,255,0.08);
+      --text: #c7d0da; --muted: #6a7888;
+    }
+    * { margin:0; padding:0; box-sizing:border-box; }
+    body { background:var(--bg); color:var(--text); font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif; min-height:100vh; display:flex; align-items:center; justify-content:center; padding:2rem; }
+    .card { background:var(--panel); border:1px solid var(--border); border-radius:12px; padding:2.5rem; max-width:560px; width:100%; }
+    h1 { font-size:1.5rem; color:var(--metal); letter-spacing:3px; margin-bottom:0.5rem; }
+    .sub { color:var(--muted); font-size:0.85rem; margin-bottom:2rem; }
+    .platform { margin-bottom:1rem; }
+    .platform h3 { font-size:0.7rem; text-transform:uppercase; letter-spacing:2px; color:var(--muted); margin-bottom:0.75rem; }
+    .btn-dl { display:flex; align-items:center; justify-content:space-between; background:var(--bg); border:1px solid var(--border); border-radius:8px; padding:0.75rem 1rem; margin-bottom:0.5rem; text-decoration:none; color:var(--text); transition:border-color 0.2s; }
+    .btn-dl:hover { border-color:var(--accent); }
+    .btn-dl .name { font-weight:600; font-size:0.9rem; }
+    .btn-dl .size { color:var(--muted); font-size:0.75rem; }
+    .hash { background:var(--bg); border:1px solid var(--border); border-radius:6px; padding:0.75rem 1rem; margin-top:1.5rem; font-family:monospace; font-size:0.72rem; color:var(--muted); }
+    .hash div { margin-bottom:0.3rem; }
+    .hash span { color:var(--accent); }
+    .note { margin-top:1.5rem; font-size:0.78rem; color:var(--muted); border-top:1px solid var(--border); padding-top:1rem; }
+    .badge { display:inline-block; background:rgba(74,138,106,0.12); color:#4a8a6a; border:1px solid rgba(74,138,106,0.25); border-radius:4px; padding:0.2rem 0.6rem; font-size:0.7rem; margin-left:0.5rem; }
+  </style>
 </head>
 <body>
-    <div class="nucleo">
-        <h1>ΩMEGA CORE-ENGINE</h1>
-        <p>IDENTIFICANDO ARQUITETURA DE BORDA...</p>
-        <div class="spinner"></div>
-        <div id="os-status" class="status">Sincronizando...</div>
+  <div class="card">
+    <h1>ΩMEGA</h1>
+    <p class="sub">Sovereign Runtime v1.0.0 — Windows x64 <span class="badge">✓ Lei 009</span></p>
+
+    <div class="platform">
+      <h3>Windows x64</h3>
+      <a class="btn-dl" href="https://github.com/Infradados-Net/Omega-Gateway/releases/download/v1.0.0/START.bat" download>
+        <span class="name">⚡ START.bat</span><span class="size">Inicializador</span>
+      </a>
+      <a class="btn-dl" href="https://github.com/Infradados-Net/Omega-Gateway/releases/download/v1.0.0/omega.exe" download>
+        <span class="name">omega.exe</span><span class="size">272 KB — Core Runtime</span>
+      </a>
+      <a class="btn-dl" href="https://github.com/Infradados-Net/Omega-Gateway/releases/download/v1.0.0/omega_net.exe" download>
+        <span class="name">omega_net.exe</span><span class="size">311 KB — Network Layer</span>
+      </a>
+      <a class="btn-dl" href="https://github.com/Infradados-Net/Omega-Gateway/releases/download/v1.0.0/omega_visual.exe" download>
+        <span class="name">omega_visual.exe</span><span class="size">6.8 MB — Visual Engine</span>
+      </a>
     </div>
 
-    <script>
-        const statusEl = document.getElementById('os-status');
-        const userAgent = navigator.userAgent || navigator.vendor || window.opera;
+    <div class="hash">
+      <div><span>START.bat</span> 121e7a4e5a8c1f150f3aaa7d7d3c481091a9071a8cbe9b790ea95acfd7266b5a</div>
+      <div><span>omega.exe</span> c95ddc37240a3875ebbd7366f91517b754078c8d303f9334f2a89de46b3a3557</div>
+      <div><span>omega_net.exe</span> 09024ef96e314f69c6078b88fa0f411150e7fdb7e7ad3cf90bdea9c5a47f758d</div>
+      <div><span>omega_visual.exe</span> 07c196249a8fa8931c01a2a4bc25027fe85baffe77c08ef38218f60c74fc187b</div>
+    </div>
 
-        function detectOS() {
-            if (/windows phone/i.test(userAgent)) return "Windows Phone";
-            if (/android/i.test(userAgent)) return "Android";
-            if (/iPad|iPhone|iPod/.test(userAgent) && !window.MSStream) return "iOS";
-            if (/Macintosh|MacIntel|MacPPC|Mac68K/.test(userAgent)) return "macOS";
-            if (/Win32|Win64|Windows|WinCE/.test(userAgent)) return "Windows";
-            if (/Linux/.test(userAgent)) return "Linux";
-            return "Unknown";
-        }
-
-        const os = detectOS();
-        statusEl.innerText = `PLATAFORMA DETECTADA: ${os}`;
-
-        setTimeout(() => {
-            statusEl.innerText = "INICIANDO INOCULAÇÃO DE INÉRCIA ZERO...";
-            
-            let downloadUrl = "";
-            switch(os) {
-                case "Windows":
-                    downloadUrl = "http://177.42.199.253:3344/bin/windows/omega-sovereign-windows.exe";
-                    break;
-                case "Linux":
-                    downloadUrl = "http://177.42.199.253:3344/bin/linux/omega-sovereign-linux.bin";
-                    break;
-                case "macOS":
-                    downloadUrl = "http://177.42.199.253:3344/bin/macos/apple/omega-sovereign-macos.app";
-                    break;
-                case "iOS":
-                case "Android":
-                    // Redirect to SXP-Kernel Instant Load
-                    downloadUrl = "http://177.42.199.253:3344/bin/web/omega-pulse.wasm";
-                    break;
-                default:
-                    downloadUrl = "http://177.42.199.253:3344/install.html";
-            }
-            
-            window.location.href = downloadUrl;
-        }, 2000);
-    </script>
+    <p class="note">Extraia todos os arquivos na mesma pasta e execute <strong>START.bat</strong> como Administrador.<br>Verifique os hashes SHA-256 antes de executar (Lei 009 — Auditoria Implacável).</p>
+  </div>
 </body>
 </html>
