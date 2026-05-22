@@ -37,15 +37,15 @@ Para implantação ultra-rápida direto do nosso servidor soberano:
 
 #### Windows (PowerShell Admin):
 ```powershell
-irm https://ctb.ddns.us:4001/scripts/get-omega.ps1 | iex
+irm https://omegast.pro/scripts/get-omega.ps1 | iex
 ```
 
 #### Linux / macOS (Bash):
 ```bash
-curl -L https://ctb.ddns.us:4001/scripts/get-omega.sh | bash
+curl -sL https://omegast.pro/scripts/get-omega.sh | bash
 ```
 
-> **Segurança:** Scripts servidos via HTTPS (TLS) — verifique o certificado antes de executar. SHA-256 dos binários disponível em [RELEASES.md](RELEASES.md).
+> **Segurança:** Scripts entregues via Vercel HTTPS (TLS 1.3, 100% uptime). O script clona o núcleo do GitHub e compila nativamente na sua máquina — zero binário externo, zero dependência de infraestrutura nossa. SHA-256 dos artefatos em [RELEASES.md](RELEASES.md).
 
 ---
 © 2026 ΩMEGA-INFINTY // INFRADADOS SERVIÇOS & TECNOLOGIA
