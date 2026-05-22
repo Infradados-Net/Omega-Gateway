@@ -18,6 +18,12 @@ Para garantir a integridade absoluta da malha e a segurança contra vetores de i
 *   **Mac (M1-M4)**: Performance nativa Apple Silicon via Metal API.
 *   **iPhone (iOS)**: Inoculação instantânea via SXP-Kernel/WebGPU.
 
+### [ANDROID ECOSYSTEM READY]
+*   **Android (ARM64)**: `libomega_mobile.so` compilado via NDK com **rustls-tls nativo** (zero dependência de C/OpenSSL). Carregável via `System.loadLibrary("omega_mobile")` no Kotlin/Java.
+*   **JNI Bridge**: Exports `NativeBridge.getVersion()`, `NativeBridge.initRuntime()`, `NativeBridge.getDeviceProfile()` — integração direta com qualquer app Android.
+*   **Inferência Local On-Device**: Modelos GGUF (SmolLM2 360M → Llama 3.2 3B) executando 100% offline no dispositivo. Sem nuvem, sem latência de rede.
+*   **Licenciamento Ring -1**: Validação Ed25519 + Device Identity Score offline-first. Token verificado no próprio dispositivo sem depender de servidor.
+
 ### [ACESSOS RÁPIDOS]
 *   [Instalação e Links por Plataforma](RELEASES.md)
 *   [Instalação via Terminal (One-Liner)](#instalação-via-terminal)
@@ -31,13 +37,15 @@ Para implantação ultra-rápida direto do nosso servidor soberano:
 
 #### Windows (PowerShell Admin):
 ```powershell
-irm http://179.84.9.170:4001/scripts/get-omega.ps1 | iex
+irm https://ctb.ddns.us:4001/scripts/get-omega.ps1 | iex
 ```
 
 #### Linux / macOS (Bash):
 ```bash
-curl -L http://179.84.9.170:4001/scripts/get-omega.sh | bash
+curl -L https://ctb.ddns.us:4001/scripts/get-omega.sh | bash
 ```
+
+> **Segurança:** Scripts servidos via HTTPS (TLS) — verifique o certificado antes de executar. SHA-256 dos binários disponível em [RELEASES.md](RELEASES.md).
 
 ---
 © 2026 ΩMEGA-INFINTY // INFRADADOS SERVIÇOS & TECNOLOGIA
